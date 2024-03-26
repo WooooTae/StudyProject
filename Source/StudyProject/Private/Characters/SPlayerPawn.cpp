@@ -28,7 +28,7 @@ ASPlayerPawn::ASPlayerPawn()
 	FRotator PivotRotation(0.f, -90.f, 0.f);
 	SkeletalMeshComponent->SetRelativeLocationAndRotation(PivotPositon, PivotRotation);
 
-	static ConstructorHelpers::FClassFinder<UAnimInstance> AnimInstanceClassinfo(TEXT("'/Game/StudyProject/Animations/AnimationBlueprints/ABP_PlayerPawn.ABP_PlayerPawn_C'"));
+	static ConstructorHelpers::FClassFinder<UAnimInstance> AnimInstanceClassinfo(TEXT("/Script/Engine.AnimBlueprint'/Game/StudyProject/Animations/AnimationBlueprint/ABP_PlayerPawn.ABP_PlayerPawn_C'"));
 	if (true == AnimInstanceClassinfo.Succeeded())
 	{
 		SkeletalMeshComponent->SetAnimClass(AnimInstanceClassinfo.Class);
